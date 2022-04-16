@@ -1,2 +1,16 @@
 #File created to update the tasks to be given for the team during the warm up challenge:
 
+Create table hive_managed
+(
+Id integer,
+Name string,
+Colors array<string> 
+Features map<string,boolean>
+information struct<battery:string, country_code:bigint>
+Row format delimiter
+Fields terminated by ';'
+Lines terminated by '\n'
+Collection items terminated by '#'
+Map keys terminated by '%'
+Location '/users/swecha/project/hive_tables'
+)
