@@ -13,6 +13,14 @@ object MapTransformation extends App{
     .appName("SparkByExamples.com")
     .getOrCreate()
 
+  
+  val structureSchema = new StructType()
+    .add("firstname",StringType)
+    .add("middlename",StringType)
+    .add("lastname",StringType)
+    .add("id",StringType)
+    .add("location",StringType)
+    .add("salary",IntegerType)
 
   val df2 = spark.createDataFrame(
     spark.sparkContext.parallelize(structureData),structureSchema)
